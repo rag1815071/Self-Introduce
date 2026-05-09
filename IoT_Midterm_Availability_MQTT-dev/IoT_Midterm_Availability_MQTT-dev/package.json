@@ -1,0 +1,17 @@
+{
+  "name": "iot-midterm-availability-mqtt",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "client:dev": "npm run dev --prefix client",
+    "client:test": "npm run test --prefix client",
+    "client:build": "npm run build --prefix client",
+    "broker:configure": "cmake -S broker -B broker/build",
+    "broker:build": "cmake --build broker/build && ctest --test-dir broker/build --output-on-failure",
+    "broker:clean": "rm -rf broker/build",
+    "broker:test": "cmake --build broker/build && ctest --test-dir broker/build --output-on-failure",
+    "publisher:dev": "npm run dev --prefix publisher_client",
+    "publisher:test": "npm run test --prefix publisher_client",
+    "publisher:build": "npm run build --prefix publisher_client"
+  }
+}
